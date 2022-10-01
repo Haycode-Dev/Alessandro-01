@@ -7,7 +7,6 @@ using namespace std;
 typedef map<char, int> mp; // documentação pesquisada
 // cria iterador com nome it
 map<char, int>::iterator it;  // documentação pesquisada
-map<char, int>::iterator itM; // documentação pesquisada
 
 int main(int argc, char *argv[])
 {
@@ -46,16 +45,17 @@ int main(int argc, char *argv[])
     }
 
     int maior = 0;
+    char maiorC;
     for (int i = 0; i < nome.length(); i++)
     {
         if (maior < contador[i])
         {
             maior = contador[i];
-            itM = c1.lower_bound(maior); // documentação pesquisada
+            maiorC = nome[i];
         }
     }
 
-    cout << "letra: " << itM->first << " mais recorrente e apareceu: " << itM->second << " vezes " << endl;
+    cout << "letra: " << maiorC << " mais recorrente e apareceu: " << maior << " vezes " << endl;
 }
 // documentação pesquisada:
 // https://docs.microsoft.com/pt-br/cpp/standard-library/map-operators?view=msvc-170
